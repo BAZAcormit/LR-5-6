@@ -1,0 +1,14 @@
+program zadacha_1_blok_1;
+var a:array[0..19] of integer;
+begin
+for var i:=0 to 19 do
+begin
+    read(a[i]);
+    if a[i]>0 then
+      a[i]:=0;
+    if a[i]<0 then
+      a[i]*=a[i];  
+    end;
+    for var i:=0 to 19 do
+      writeln(a[i]);
+end.
