@@ -1,0 +1,28 @@
+program zadacha_2_blok_1;
+var schet, nachalo, konec, sum:integer;
+umn:real;
+var a:array[0..19] of integer;
+begin
+  sum:=0;
+  umn:=1;
+  schet:=0;
+  randomize;
+  for var i:=0 to 19 do
+    begin
+    a[i]:=random(-22,93);
+    writeln(i+1, ': ' , a[i]);
+  if not(odd(a[i])) and (odd(i+1)) and (a[i]<>0) then
+     schet+=1;
+  if odd(a[i]) then
+    umn*=a[i]; 
+    end;
+    write('Введите начало промежутка суммирования ');
+    read(nachalo);
+    write('Введите конец промежутка суммирования ');
+    read(konec);
+    for var i:=nachalo to konec do
+    sum+=a[i-1];
+    writeln('Количество четных элементов массива, стоящих на нечетных местах: ', schet);
+    writeln('Произведение нечетных элементов массива: ', umn);
+    writeln('Сумма элементов массива, принадлежащих промежутку от ',nachalo , ' до ', konec, ': ', sum); 
+end.
