@@ -1,0 +1,44 @@
+program zadacha_2_blok_1;
+
+var
+  max, n, odinelem, naimensh, m, nomer: integer;
+
+var
+  a: array[0..19] of integer;
+
+begin
+  nomer := -1;
+  m := 0;
+  naimensh := 65;
+  odinelem := 0;
+  max := -52;
+  randomize;
+  for var i := 0 to 19 do
+  begin
+    a[i] := random(-52, 65);
+    writeln(i + 1, ': ', a[i]);
+    if a[i] > max then
+    begin
+      n := i;
+      max := a[i];
+    end;
+    if (naimensh > a[i]) and (a[i] > 0) then
+    begin
+      naimensh := a[i];
+      m := i;
+    end;
+    if a[i] mod 5 = 0 then
+      nomer := i;
+    if i <> 0 then
+      for var p := i downto 1 do
+        if a[i] = a[p - 1] then
+          odinelem += 1;
+  end;
+  if odinelem = 0 then
+    writeln('Наибольший элемент массива ', max, '   Номер элемента ', n+1);
+  writeln('Наименьший положительный элемент массива ', naimensh, '   Номер элемента ', m+1);
+  if nomer = -1 then
+    write('Номеров кратных 5 не существует ')
+  else
+      write('Номер последнего элемента массива, кратного 5 ', nomer+1);
+end.
