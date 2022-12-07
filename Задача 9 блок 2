@@ -1,0 +1,16 @@
+import random
+a=[]
+b=[]
+c=0
+for i in range(20):
+    a.append(random.randrange(-100, 101))
+print(a)
+for i in a:
+    if i>0 and c==0:
+        a.remove(i)
+        c+=1
+print(a)
+b=a.copy()
+b.sort()
+a.remove(b[0])
+print(a)
