@@ -1,0 +1,14 @@
+import random
+a=[]
+b=[]
+c=-1
+d=0
+for i in range(20):
+    a.append(random.randrange(-100, 101))
+    if a[i]%2==0:
+        if c==-1:   
+            c=i
+        d+=1
+print(a)
+a.insert(c+1, d)
+print(a)
