@@ -1,0 +1,10 @@
+import random
+a=[]
+b=[]
+for i in range(30):
+    a.append(random.randrange(-99, 68))
+print('a=', a)
+for i in a:
+    if i%2==0:
+        b.append(i)
+print('b=', b)
