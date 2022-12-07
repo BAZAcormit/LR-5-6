@@ -1,0 +1,27 @@
+import random
+a=[]
+b=[]
+ac=0
+bc=0
+for i in range(10):
+    a.append(random.randrange(-100, 101))
+    b.append(random.randrange(-100, 101))
+print('a=', a)
+print('b=', b)
+for i in a:
+    if i>0:
+        ac+=1
+for i in b:
+    if i>0:
+        bc+=1
+print('ac=', ac)
+print('bc=', bc)
+if ac<bc:
+    for i in range(9):
+        a[i]*=10
+    print('a*=', a)
+elif ac>bc:
+    for i in range(9):
+        b[i]*=10
+    print('b*=', b)
+    
