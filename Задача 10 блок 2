@@ -1,0 +1,11 @@
+import random
+a=[]
+b=[]
+for i in range(20):
+    a.append(random.randrange(-100, 101))
+print(a)
+for i in a:
+    if not i<0:
+        b.append(i)
+a=b.copy()
+print(a)
