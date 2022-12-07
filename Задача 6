@@ -1,0 +1,13 @@
+import random
+a=[]
+b=[]
+for i in range(4):
+    a.append(random.randrange(-100, 101))
+b=a.copy()
+b.sort()
+print('a=', a)
+print('b=', b)
+if a==b:
+    print('Упорядочены')
+else:
+    print('Не упорядочены')
